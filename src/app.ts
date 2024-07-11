@@ -1,3 +1,6 @@
+// Importo e configuro dotenv
+import dotenv from 'dotenv';
+dotenv.config();
 // Importo axios
 import axios from 'axios';
 
@@ -6,7 +9,7 @@ const form = document.querySelector('form')!;
 // Dichiaro una variabile per l'input dell'indirizzo
 const addressInput = document.getElementById('address')! as HTMLInputElement;
 // Dichiaro una variabile per l'API di Google Maps
-const GOOGLE_API_KEY = 'AIzaSyALYiBnxlroqc8qawAoV_Tzed9pjXHcWIc';
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
 /*
     google sarà disponibile a livello globale grazie all SDK che sto
